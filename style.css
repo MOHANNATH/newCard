@@ -1,0 +1,79 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --yellow: hsl(71, 73%, 54%);
+  --gray: hsl(204, 43%, 93%);
+  --blue: hsl(218, 22%, 67%);
+}
+body {
+  background-color: #e6eff6;
+}
+* {
+  font-family: "karla";
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.container {
+  background-color: white;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 640px;
+  grid-template-columns: 320px 320px;
+  grid-template-rows: auto auto;
+  box-shadow: 2px 2px 5px gray;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.card {
+  margin-top: 10%;
+}
+.header {
+  padding: 40px 45px;
+  grid-column: span 2;
+}
+.left-sec {
+  grid-column: 1/2;
+  grid-row: 2/-1;
+  background-color: var(--cyan);
+  color: var(--gray);
+  padding: 40px;
+}
+.right-sec {
+  grid-column: 2/-1;
+  grid-row: 2/-1;
+  background-color: var(--cyan);
+  color: var(--gray);
+  opacity: 0.9;
+  padding: 40px;
+}
+button {
+  background-color: #bfdf32;
+  padding: 20px 90px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 2px 2px 5px gray;
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    display: block;
+    width: 90%;
+    /*text-align: center;*/
+  }
+  .header,
+  .left-sec,
+  .right-sec {
+    padding: 20px;
+  }
+  button {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    padding: 10px 20px;
+  }
+  .card {
+    margin-top: 10%;
+  }
+}
